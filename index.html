@@ -18,28 +18,23 @@
 */
       var ax;
       var rx;
-      var highX= 0;
+      var prevX= 0;
       
        function setup() {
          createCanvas(window.innerWidth, window.innerHeight);
-         enableHighAccuracy: true;
        }
        
        function draw() {
-         background(250);
-         ax= accelerationX;
-         rx= rotationX;
-         //ellipse(width/2, height/2. accelerationX);
+         //background("rgba(255,255,255,0)");
+         rx= rotationX.toFixed(2);
+         arx= rx-10;
+         brx= ((rx-10)*-1);
          
-         
-         if(ax<highX) {
-           highX= ax;
-           document.getElementById('ax').innerHTML= "Acceleration: " +highX;
-           document.body.style.backgroundColor= "#cc4401";
+         document.body.style.backgroundColor= "#cc4401";
          }
          
         
-        document.getElementById('rx').innerHTML= "Rotation: "+ rx.toFixed(2);
+        document.getElementById('rx').innerHTML= "Rotation: "+ rx;
          
        }
     </script>
