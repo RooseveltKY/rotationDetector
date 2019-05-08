@@ -6,7 +6,6 @@
   <body>
     <h1 id= "ax"></h1>
     <h1 id= "rx"></h1>
-    <h1> Test</h1>
     <script>
 
 //Incremental build
@@ -29,18 +28,18 @@
        function draw() {
          background(250);
          ax= accelerationX;
-         rx= rotationX.toFixed(2);
+         rx= rotationX;
          //ellipse(width/2, height/2. accelerationX);
          
          
          if(ax<highX) {
            highX= ax;
-           document.getElementById('ax').innerHTML= highX;
+           document.getElementById('ax').innerHTML= "Acceleration: " +highX;
            document.body.style.backgroundColor= "#cc4401";
          }
          
         
-        document.getElementById('rx').innerHTML= "Rotation "+ rx;
+        document.getElementById('rx').innerHTML= "Rotation: "+ rx.toFixed(2);
          
        }
     </script>
