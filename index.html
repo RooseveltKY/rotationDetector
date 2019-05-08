@@ -1,3 +1,12 @@
+//Incremental build
+/*1. Check to see if the phone is being moved
+      a. display to the screen the value
+  2. Do something when it is moved
+  
+  Optional: should there be a default state?
+  
+*/
+
 <html>
   <head>
     <script src= "p5.min.js"></script>
@@ -16,13 +25,17 @@
        }
        
        function draw() {
+         background(250);
          ax= acclerationX;
          rx= rotationX;
+         
          
          if(ax<highX) {
            highX= ax;
            document.getElementById('ax').innerHTML= highX;
+           document.body.style.backgroundColor= "#cc4401";
          }
+         
         
         document.getElementById('rx').innerHTML= "Rotation "+ rx;
          
