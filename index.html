@@ -23,12 +23,13 @@
       
        function setup() {
          createCanvas(window.innerWidth, window.innerHeight);
+         enableHighAccuracy: true;
        }
        
        function draw() {
          background(250);
          ax= accelerationX;
-         rx= rotationX;
+         rx= rotationX.toFixed(2);
          //ellipse(width/2, height/2. accelerationX);
          
          
